@@ -1,6 +1,24 @@
-name : CI-Pipeline
-on : push
-jobs : 
-  first-job:
-    runs-on : 'ubuntu-latest'
-    
+name: CI Pipeline
+
+on:
+  push:
+
+jobs:
+  first_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'   # or whichever version you need
+
+      - name: Install requirements
+        run: pip install -r requirements.txt
+
+      - name: Run the script
+        run: python 0-DataingestParsing/basic.py
+

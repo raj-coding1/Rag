@@ -3,3 +3,4 @@ from langchain_community.document_loaders import(
     PyMuPDFLoader,
     UnstructuredPDFLoader
 )
+import pandas as pd
