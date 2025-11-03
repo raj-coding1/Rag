@@ -16,12 +16,21 @@ jobs:
         with:
           python-version: '3.9'   # or whichever version you need
 
+      # Step 3: Cache dependencies
+      - name: Cache pip dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
       - name: Install requirements
         run: pip install -r requirements.txt
 
       - name: Run only specific tagged cell
         run: 
           pip install papermill
-          papermill notebooks/example.ipynb output.ipynb --filter_tag run_me
+          papermill 0-DataingestParsing/2-dataparsingpdf.ipynb output.ipynb --filter_tag run_me
   
 
