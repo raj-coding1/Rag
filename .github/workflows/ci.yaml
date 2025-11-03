@@ -31,6 +31,6 @@ jobs:
       - name: Run only specific tagged cell
         run: 
           # pip install papermill
-          papermill 0-DataingestParsing/2-dataparsingpdf.ipynb output.ipynb --filter_tag run_me
+          papermill 0-DataingestParsing/2-dataparsingpdf.ipynb output.ipynb
   
 
