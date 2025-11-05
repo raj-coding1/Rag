@@ -5,6 +5,7 @@ on:
 
 jobs:
   first_job:
+  #first run on macos is 2min 1sec
     runs-on: macos-latest
 
     steps:
