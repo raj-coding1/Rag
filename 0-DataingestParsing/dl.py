@@ -12,8 +12,8 @@ import matplotlib.pyplot as plt
 # print(x)
 # plt.imshow(x[0])
 # plt.show()
-# x = 1/255.0
-# xt = 1/255.0
+x = x/255.0
+xt = xt/255.0
 #train the model
 # print(x)
 
