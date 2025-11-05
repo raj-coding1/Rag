@@ -10,3 +10,7 @@ pypdf
 python-dotenv
 pymupdf
 papermill
+tensorflow
+numpy
+pandas
+matplotlib

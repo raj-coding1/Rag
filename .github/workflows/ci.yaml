@@ -28,9 +28,11 @@ jobs:
       - name: Install requirements
         run: pip install -r requirements.txt
 
-      - name: Run only specific tagged cell
+      - name: Run the file
         run: 
           # pip install papermill
-          papermill 0-DataingestParsing/2-dataparsingpdf.ipynb output.ipynb
+          # papermill 0-DataingestParsing/2-dataparsingpdf.ipynb output.ipynb
+          python 0-DataingestParsing/dl.py
+          
   
 
