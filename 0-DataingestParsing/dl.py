@@ -8,9 +8,14 @@ import matplotlib.pyplot as plt
 #load the data sets
 
 (x,y),(xt,yt) = tf.keras.datasets.mnist.load_data()
-x = 1/255.0
-xt = 1/255.0
+# print(type(x))
+# print(x)
+# plt.imshow(x[0])
+# plt.show()
+# x = 1/255.0
+# xt = 1/255.0
 #train the model
+# print(x)
 
 model = models.Sequential([
     tf.keras.Input(shape=(28, 28)),
@@ -18,6 +23,10 @@ model = models.Sequential([
     layers.Dense(16,activation='relu'),
     layers.Dense(10,activation='softmax')
 ])
+
+print(type(x), x.shape, x.dtype)
+print(type(y), y.shape)
+
 model.compile(optimizer='adam', loss = 'sparse_categorical_crossentropy', metrics= ['accuracy'])
 history= model.fit(x,y,epochs = 30, validation_data=(xt, yt))
 test_loss , test_accuracy = model.evaluate(xt,yt)
