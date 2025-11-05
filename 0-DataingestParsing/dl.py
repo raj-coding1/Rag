@@ -13,7 +13,8 @@ import matplotlib.pyplot as plt
 #train the model
 
 model = models.Sequential([
-    layers.Flatten(input_shape = (28,28)),
+    tf.keras.Input(shape=(28, 28)),
+    layers.Flatten(),
     layers.Dense(16,activation='relu'),
     layers.Dense(10,activation='softmax')
 ])
