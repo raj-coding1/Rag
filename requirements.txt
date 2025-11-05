@@ -1,15 +1,15 @@
-langchain
-langchain-groq
-faiss-cpu
-tiktoken
-langchain-community
-langchain-openai
-chromadb
-sentence-transformers
-pypdf
-python-dotenv
-pymupdf
-papermill
+# langchain
+# langchain-groq
+# faiss-cpu
+# tiktoken
+# langchain-community
+# langchain-openai
+# chromadb
+# sentence-transformers
+# pypdf
+# python-dotenv
+# pymupdf
+# papermill
 tensorflow
 numpy
 pandas
