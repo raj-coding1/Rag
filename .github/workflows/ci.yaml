@@ -5,7 +5,7 @@ on:
 
 jobs:
   first_job:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     steps:
       - name: Checkout code
@@ -33,6 +33,6 @@ jobs:
           # pip install papermill
           # papermill 0-DataingestParsing/2-dataparsingpdf.ipynb output.ipynb
           python 0-DataingestParsing/dl.py
-          
+
   
 
