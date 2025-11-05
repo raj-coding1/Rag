@@ -8,8 +8,8 @@ import matplotlib.pyplot as plt
 #load the data sets
 
 (x,y),(xt,yt) = tf.keras.datasets.mnist.load_data()
-(x,xt) = (1/255.,1/255.)
-
+x = 1/255.
+xt = 1/255.
 #train the model
 
 model = models.Sequential([
